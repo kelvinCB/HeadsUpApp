@@ -102,7 +102,6 @@ public class MainActivity extends AppCompatActivity {
 
         client.excecute("https://www.w3schools.com/angular/customers.php");
 
-
     }
 
 

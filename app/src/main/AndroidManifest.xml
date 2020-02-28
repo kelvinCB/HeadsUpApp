@@ -3,7 +3,9 @@
     package="com.example.lk_heads_up">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
     <application
         android:allowBackup="true"
         android:allowClearUserData="true"
@@ -13,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".GameOverActivity"></activity>
+
         <activity
             android:name=".activity_splah_screen"
             android:screenOrientation="portrait">
@@ -32,6 +34,9 @@
         <activity
             android:name=".WordsActivity"
             android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".GameOverActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
