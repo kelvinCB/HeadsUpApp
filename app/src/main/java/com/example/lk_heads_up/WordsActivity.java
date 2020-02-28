@@ -39,11 +39,14 @@ public class WordsActivity extends AppCompatActivity {
     // = findViewById(R.id.textViewPalabraCategoria);
 
 
-    String[] categorias = {"Animales", "Frutas"};
+    String[] categorias = {"Animales", "Frutas", "Elecciones Fallidas RD"};
     String[] animalsWords = {"León", "Gato", "Perro", "Cotorra", "Flamenco", "Burro", "Vaca",
             "TorTuga", "Elefante", "Hormiga", "Tigre", "Tiburón", "Cocodrilo", "Girafa", "Ballena"};
     String[] fruitsWords = {"Pera", "Piña", "Mango", "Aguacate", "Fresa", "Cereza", "Arándanos",
             "Kiwi", "Coco", "Manzana", "Limón", "China", "Chinola", "Mandarina", "Lechoza"};
+    String[] eleccionesFallidasRd = {"Independencia", "Protestas Pacíficas", "El Penco", "Dañiño", "Fuerza del Pueblo",
+            "Margot Presidenta", "Popis", "Cacerolazo", "470 Kilómetro", "Abinader", "#Sevan",
+            "Plaza de la Bandera", "Negro", "No e Bruta ni e Suiza", "Algoritmo"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +57,8 @@ public class WordsActivity extends AppCompatActivity {
             palabras.setText(animalsWords[posPalabra]);
         } else if (categoriaAuxiliar.equalsIgnoreCase(categorias[1])) {
             palabras.setText(fruitsWords[posPalabra]);
+        } else if (categoriaAuxiliar.equalsIgnoreCase(categorias[2])) {
+            palabras.setText(eleccionesFallidasRd[posPalabra]);
         } else {
             Toast.makeText(WordsActivity.this, "No encuentro la categoría", Toast.LENGTH_LONG).show();
         }
@@ -118,8 +123,8 @@ public class WordsActivity extends AppCompatActivity {
     }
 
     private void sound3() {
-        MediaPlayer mplayer1 = MediaPlayer.create(getApplicationContext(), R.raw.sound3);
-        mplayer1.start();
+        MediaPlayer mplayer2 = MediaPlayer.create(getApplicationContext(), R.raw.tic2);
+        mplayer2.start();
     }
 
     private void changeWhenGuess(TextView palabras) {
@@ -127,34 +132,44 @@ public class WordsActivity extends AppCompatActivity {
         sound1();
         layoutWordActivity = findViewById(R.id.LinearWordActivity);
         layoutWordActivity.setBackgroundResource(R.color.colorPrimary);
+
+        //  layoutWordActivity.setBackgroundResource(R.color.basicBlue);
+
         for (int i = posPalabra; i < animalsWords.length; i++) {
             if (categoriaAuxiliar.equalsIgnoreCase(categorias[0])) {
                 palabras.setText(animalsWords[posPalabra]);
             } else if (categoriaAuxiliar.equalsIgnoreCase(categorias[1])) {
-                palabras.setText(animalsWords[i]);
+                palabras.setText(fruitsWords[posPalabra]);
+            } else if (categoriaAuxiliar.equalsIgnoreCase(categorias[2])) {
+                palabras.setText(eleccionesFallidasRd[posPalabra]);
             } else {
                 Toast.makeText(WordsActivity.this, "No encuentro la categoría", Toast.LENGTH_LONG).show();
             }
         }
-        //   layoutWordActivity.setBackgroundResource(R.color.basicBlue);
+
+
     }
 
     private void changeWhenByPass(TextView palabras) {
         final TextView finalPalabras = palabras;
         sound2();
         layoutWordActivity = findViewById(R.id.LinearWordActivity);
-        layoutWordActivity.setBackgroundResource(R.color.colorAccent);
+        layoutWordActivity.setBackgroundResource(R.color.byPassYellow);
         for (int i = posPalabra; i < animalsWords.length; i++) {
             if (categoriaAuxiliar.equalsIgnoreCase(categorias[0])) {
                 palabras.setText(animalsWords[posPalabra]);
             } else if (categoriaAuxiliar.equalsIgnoreCase(categorias[1])) {
-                palabras.setText(fruitsWords[i]);
+                palabras.setText(fruitsWords[posPalabra]);
+            } else if (categoriaAuxiliar.equalsIgnoreCase(categorias[2])) {
+                palabras.setText(eleccionesFallidasRd[posPalabra]);
             } else {
                 Toast.makeText(WordsActivity.this, "No encuentro la categoría", Toast.LENGTH_LONG).show();
             }
         }
 
-        //layoutWordActivity.setBackgroundResource(R.color.basicBlue);
+
+        //  layoutWordActivity.setBackgroundResource(R.color.basicBlue);
+
 
     }
 
@@ -219,12 +234,14 @@ public class WordsActivity extends AppCompatActivity {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                sound3();
+
                 Intent intent = new Intent(WordsActivity.this, GameOverActivity.class);
                 startActivity(intent);
+                sound3();
                 finish();
             }
         }, (waitTime * 1000));
+
 
     }
 

@@ -10,4 +10,7 @@
     <string name="textViewTiempoAlerta">5</string>
     <string name="textViewTiempoPalabras">1 Min</string>
     <string name="textViewGameOver">Game Over</string>
+    <string name="btn_JugarDeNuevo">Volver a Categorias</string>
+    <string name="btn_VerResultados">Ver Resultados</string>
+    <string name="textViewResults">Resultados</string>
 </resources>

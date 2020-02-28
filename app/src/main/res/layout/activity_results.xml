@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GameOverActivity">
+    tools:context=".ResultsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,11 +22,11 @@
 
 
             <TextView
-                android:id="@+id/textViewMensajeAlerta"
+                android:id="@+id/textViewResults"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
-                android:text="@string/textViewGameOver"
+                android:text="@string/textViewResults"
                 android:textAlignment="center"
                 android:textColor="#3700B3"
                 android:textSize="50dp">
@@ -38,8 +38,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="100dp"
             android:orientation="horizontal">
 
 
@@ -58,31 +57,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_marginTop="40dp"
-            android:orientation="horizontal">
-
-
-            <Button
-                android:id="@+id/btn_VerResultados"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:onClick="llamarViewResultsActivity"
-                android:text="@string/btn_VerResultados"
-                android:textAlignment="center"
-                android:textColor="#3700B3"
-
-                android:textSize="40dp">
-
-            </Button>
-
-
-        </LinearLayout>
 
     </LinearLayout>
-
 
 </RelativeLayout>

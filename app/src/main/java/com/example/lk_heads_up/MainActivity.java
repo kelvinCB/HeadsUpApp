@@ -2,7 +2,7 @@ package com.example.lk_heads_up;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-//import android.app.Person;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // prueba  = (TextView) findViewById(R.id.textViewPrueba);
-        //getApi2();
+
+        getApi2();
 
     }
 
@@ -60,6 +60,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btnFrutas:
                 categoriaAuxiliar = "Frutas";
+                break;
+            case R.id.btnEleccionesFallidasRD:
+                categoriaAuxiliar = "Elecciones Fallidas RD";
                 break;
         }
     }

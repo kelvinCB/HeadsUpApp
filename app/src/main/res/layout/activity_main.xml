@@ -86,6 +86,32 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/inside3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#eee8aa"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnEleccionesFallidasRD"
+                    android:layout_width="130dp"
+                    android:layout_height="200dp"
+
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginVertical="30dp"
+
+                    android:background="#9370db"
+                    android:onClick="llamarView"
+
+                    android:text="@string/btn_EleccionesFallidasRD">
+
+
+                </Button>
+
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 

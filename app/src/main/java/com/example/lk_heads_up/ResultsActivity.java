@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class GameOverActivity extends AppCompatActivity {
+public class ResultsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_over);
+        setContentView(R.layout.activity_results);
     }
 
     public void llamarViewMainActivity(View view) {
@@ -20,12 +20,4 @@ public class GameOverActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
-
-    public void llamarViewResultsActivity(View view) {
-
-        Intent intent = new Intent(this, ResultsActivity.class);
-        startActivity(intent);
-
-    }
-
 }
