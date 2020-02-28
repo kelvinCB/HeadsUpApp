@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ff0000"
+        android:background="#6EDB74"
         android:orientation="vertical">
 
 
@@ -26,9 +26,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
+                android:fontFamily="serif"
                 android:text="@string/textViewResults"
                 android:textAlignment="center"
-                android:textColor="#3700B3"
+                android:textColor="#030009"
                 android:textSize="50dp">
 
             </TextView>
@@ -46,11 +47,13 @@
                 android:id="@+id/textViewJugarDeNuevo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:fontFamily="serif"
                 android:onClick="llamarViewMainActivity"
                 android:text="@string/btn_JugarDeNuevo"
                 android:textAlignment="center"
-                android:textColor="#3700B3"
-                android:textSize="35dp">
+                android:textColor="#030009"
+                android:textSize="35dp"
+                android:textStyle="bold">
 
             </Button>
 
