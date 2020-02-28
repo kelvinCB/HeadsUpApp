@@ -12,7 +12,7 @@
         android:id="@+id/LinearWordActivity"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#00ced1"
+        android:background="#030F50"
         android:orientation="vertical">
 
         <LinearLayout
@@ -28,9 +28,10 @@
                 android:id="@+id/textViewTiempoPalabras"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:fontFamily="monospace"
                 android:text="@string/textViewTiempoPalabras"
                 android:textAlignment="center"
-                android:textColor="#3700B3"
+                android:textColor="#B3BCE9"
                 android:textSize="30dp">
 
             </TextView>
@@ -50,10 +51,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
+                android:fontFamily="serif"
                 android:text="@string/textViewPalabras"
                 android:textAlignment="center"
-                android:textColor="#3700B3"
-                android:textSize="40dp">
+                android:textColor="#FDFCFD"
+                android:textSize="60dp"
+                android:textStyle="bold">
 
             </TextView>
 

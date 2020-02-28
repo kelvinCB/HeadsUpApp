@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#00ced1"
+        android:background="#DBB9E0"
         android:orientation="vertical">
 
         <LinearLayout
@@ -26,9 +26,10 @@
                 android:id="@+id/textViewTiempoEspera"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:fontFamily="monospace"
                 android:text="@string/textViewTiempoAlerta"
                 android:textAlignment="center"
-                android:textColor="#3700B3"
+                android:textColor="#300338"
                 android:textSize="50dp">
 
             </TextView>
@@ -48,10 +49,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
+                android:fontFamily="casual"
                 android:text="@string/textViewMensajeAlerta"
                 android:textAlignment="center"
-                android:textColor="#3700B3"
-                android:textSize="40dp">
+                android:textColor="#04000E"
+                android:textSize="40dp"
+                android:textStyle="bold">
 
             </TextView>
 

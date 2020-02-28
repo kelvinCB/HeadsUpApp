@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#00ced1"
+    android:background="#DDB5E4"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -18,14 +18,14 @@
             android:id="@+id/StackContent"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#eee8aa"
+            android:background="#DDB5E4"
             android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/inside1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#eee8aa"
+                android:background="#DDB5E4"
                 android:layout_marginTop="30dp"
                 android:orientation="horizontal">
 
@@ -33,10 +33,12 @@
                     android:id="@+id/textViewCategorias"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:fontFamily="cursive"
                     android:text="@string/textViewCategorias"
                     android:textAlignment="center"
-                    android:textColor="#3700B3"
-                    android:textSize="50dp">
+                    android:textColor="#05000F"
+                    android:textSize="50dp"
+                    android:textStyle="bold">
 
                 </TextView>
 
@@ -47,8 +49,8 @@
                 android:id="@+id/inside2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#eee8aa"
                 android:layout_marginTop="40dp"
+                android:background="#DDB5E4"
                 android:orientation="horizontal">
 
                 <Button
@@ -60,9 +62,12 @@
                     android:layout_marginVertical="30dp"
 
                     android:background="#9370db"
-                    android:onClick="llamarView"
+                    android:fontFamily="serif"
 
-                    android:text="@string/btn_Animales">
+                    android:onClick="llamarView"
+                    android:text="@string/btn_Animales"
+                    android:textColor="#F8F1F3"
+                    android:textStyle="bold">
 
 
                 </Button>
@@ -73,12 +78,15 @@
                     android:layout_width="130dp"
                     android:layout_height="200dp"
 
-                    android:layout_marginVertical="30dp"
                     android:layout_marginHorizontal="30dp"
+                    android:layout_marginVertical="30dp"
                     android:background="#9370db"
-                    android:text="@string/btn_Frutas"
+                    android:fontFamily="serif"
 
-                    android:onClick="llamarView">
+                    android:onClick="llamarView"
+                    android:text="@string/btn_Frutas"
+                    android:textColor="#EFEDF0"
+                    android:textStyle="bold">
 
 
                 </Button>
@@ -90,8 +98,8 @@
                 android:id="@+id/inside3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#eee8aa"
                 android:layout_marginTop="40dp"
+                android:background="#DDB5E4"
                 android:orientation="horizontal">
 
                 <Button
@@ -103,9 +111,12 @@
                     android:layout_marginVertical="30dp"
 
                     android:background="#9370db"
-                    android:onClick="llamarView"
+                    android:fontFamily="serif"
 
-                    android:text="@string/btn_EleccionesFallidasRD">
+                    android:onClick="llamarView"
+                    android:text="@string/btn_EleccionesFallidasRD"
+                    android:textColor="#F3F1F3"
+                    android:textStyle="bold">
 
 
                 </Button>
