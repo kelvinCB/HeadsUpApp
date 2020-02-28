@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent"
+    android:background="#00ced1"
+    tools:context=".WordActivity">
+
+    <TextView
+        android:id="@+id/textViewPalabras"
+        android:layout_width="465dp"
+        android:layout_height="113dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="134dp"
+        android:layout_marginLeft="134dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginRight="132dp"
+        android:layout_marginBottom="108dp"
+        android:fontFamily="casual"
+        android:text="@string/textViewPalabras"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="80dp">
+
+    </TextView>
+</RelativeLayout>
