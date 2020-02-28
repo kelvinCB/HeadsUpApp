@@ -8,10 +8,8 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -46,13 +44,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // prueba  = (TextView) findViewById(R.id.textViewPrueba);
-        getApi2();
+        //getApi2();
 
     }
 
     public void llamarView(View view) {
 
-        Intent intent = new Intent(this, WordActivity.class);
+        Intent intent = new Intent(this, WaitBeforeWordsActivity.class);
         startActivity(intent);
 
     }

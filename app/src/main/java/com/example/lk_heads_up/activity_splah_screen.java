@@ -10,7 +10,7 @@ import android.view.WindowManager;
 
 public class activity_splah_screen extends AppCompatActivity {
 
-    private final int DURACION_SPLASH = 1000;
+    private final int DURACION_SPLASH = 2000;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

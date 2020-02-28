@@ -5,4 +5,8 @@
     <string name="btn_Frutas">Frutas</string>
     <string name="textViewCategorias">Categorias</string>
     <string name="textViewPalabras">Palabra</string>
+    <string name="textViewMensajeAlerta">COLOCA EL CELULAR EN TU FRENTE</string>
+    <string name="textViewTiempoAlerta">5</string>
+    <string name="textViewTiempoPalabras">1 Min</string>
+    <string name="textViewGameOver">Game Over</string>
 </resources>
