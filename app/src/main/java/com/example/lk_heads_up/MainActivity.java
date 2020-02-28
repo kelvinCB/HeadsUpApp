@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView categoriasView;
     LinearLayout stackContent;
+    public static String categoriaAuxiliar;
 
 
     @Override
@@ -52,7 +54,14 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, WaitBeforeWordsActivity.class);
         startActivity(intent);
-
+        switch (view.getId()) {
+            case R.id.btnAnimales:
+                categoriaAuxiliar = "Animales";
+                break;
+            case R.id.btnFrutas:
+                categoriaAuxiliar = "Frutas";
+                break;
+        }
     }
 
     public void getApi2() {
@@ -149,5 +158,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 
 }

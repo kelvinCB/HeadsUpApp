@@ -56,13 +56,13 @@
                     android:layout_width="130dp"
                     android:layout_height="200dp"
 
-                    android:layout_marginVertical="30dp"
                     android:layout_marginHorizontal="30dp"
+                    android:layout_marginVertical="30dp"
 
                     android:background="#9370db"
-                    android:text="@string/btn_Animales"
+                    android:onClick="llamarView"
 
-                    android:onClick="llamarView">
+                    android:text="@string/btn_Animales">
 
 
                 </Button>

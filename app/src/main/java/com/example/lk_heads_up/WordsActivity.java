@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -18,6 +20,9 @@ public class WordsActivity extends AppCompatActivity {
     int waitTime = 31;
     int valor = 0;
     int auxiliar = 1;
+    String categoriaAuxiliar = MainActivity.categoriaAuxiliar;
+
+    String[] categorias = {"Animales", "Frutas"};
     String[] animalsWords = {"Tortuga", "Flamenco", "Perro", "Gato", "Ballena"};
     String[] fruitsWords = {"Pera", "Manzana", "Kiwi", "Limón", "Chinola"};
 
@@ -46,8 +51,10 @@ public class WordsActivity extends AppCompatActivity {
 
         final TextView finalTiempoDeEspera = tiempoDeEspera;
         final TextView finalPalabras = palabras;
-        final Button animals = findViewById(R.id.btnAnimales);
+        Button animals = findViewById(R.id.btnAnimales);
         Button fruits = findViewById(R.id.btnFrutas);
+        //   animals.setOnClickListener(this);
+        // animals.setOnClickListener(this);
 
         Thread t = new Thread() {
             @Override
@@ -60,16 +67,29 @@ public class WordsActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                //  palabras.setText(animalsWords[0]);
-                                if (valor == 5) {
-                                    palabras.setText(animalsWords[auxiliar]);
-                                    auxiliar++;
-                                    valor = 0;
-                                    if (auxiliar > animalsWords.length - 1) {
-                                        auxiliar = 0;
+                                if (categoriaAuxiliar.equalsIgnoreCase(categorias[0])) {
+                                    palabras.setText(animalsWords[auxiliar - 1]);
+                                    if (valor == 5) {
+                                        palabras.setText(animalsWords[auxiliar]);
+                                        auxiliar++;
+                                        valor = 0;
+                                        if (auxiliar > animalsWords.length - 1) {
+                                            auxiliar = 0;
+                                        }
                                     }
+                                } else if (categoriaAuxiliar.equalsIgnoreCase(categorias[1])) {
+                                    palabras.setText(fruitsWords[auxiliar - 1]);
+                                    if (valor == 5) {
+                                        palabras.setText(fruitsWords[auxiliar]);
+                                        auxiliar++;
+                                        valor = 0;
+                                        if (auxiliar > fruitsWords.length - 1) {
+                                            auxiliar = 0;
+                                        }
+                                    }
+                                } else {
+                                    Toast.makeText(WordsActivity.this, "No encuentro la categoría", Toast.LENGTH_LONG).show();
                                 }
-
                                 waitTime--;
                                 MediaPlayer mplayer1 = MediaPlayer.create(getApplicationContext(), R.raw.tic); // Hacen sonar cada segundo
                                 mplayer1.start();
@@ -101,5 +121,6 @@ public class WordsActivity extends AppCompatActivity {
         }, (waitTime * 1000));
 
     }
+
 
 }
