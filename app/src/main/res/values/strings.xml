@@ -3,6 +3,7 @@
     <string name="btn_prueba">PRUEBA</string>
     <string name="btn_Animales">Animales</string>
     <string name="btn_Frutas">Frutas</string>
+    <string name="btn_EleccionesFallidasRD">Elecciones Fallidas RD</string>
     <string name="textViewCategorias">Categorias</string>
     <string name="textViewPalabras">Palabra</string>
     <string name="textViewMensajeAlerta">COLOCA EL CELULAR EN TU FRENTE</string>
