@@ -3,15 +3,12 @@ package com.example.lk_heads_up;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,7 +21,7 @@ public class WordsActivity extends AppCompatActivity {
     //Declarando variables
     Timer timer;
 
-    int waitTime = 31;
+    int waitTime = 11;
     int valor = 0;
     // int auxiliar = 0;
     int posPalabra = 0;
@@ -40,10 +37,13 @@ public class WordsActivity extends AppCompatActivity {
 
 
     String[] categorias = {"Animales", "Frutas", "Elecciones Fallidas RD"};
+
     String[] animalsWords = {"León", "Gato", "Perro", "Cotorra", "Flamenco", "Burro", "Vaca",
             "TorTuga", "Elefante", "Hormiga", "Tigre", "Tiburón", "Cocodrilo", "Girafa", "Ballena"};
+
     String[] fruitsWords = {"Pera", "Piña", "Mango", "Aguacate", "Fresa", "Cereza", "Arándanos",
             "Kiwi", "Coco", "Manzana", "Limón", "China", "Chinola", "Mandarina", "Lechoza"};
+
     String[] eleccionesFallidasRd = {"Independencia", "Protestas Pacíficas", "El Penco", "Dañiño", "Fuerza del Pueblo",
             "Margot Presidenta", "Popis", "Cacerolazo", "470 Kilómetro", "Abinader", "#Sevan",
             "Plaza de la Bandera", "Negro", "No e Bruta ni e Suiza", "Algoritmo"};
@@ -118,12 +118,12 @@ public class WordsActivity extends AppCompatActivity {
     }
 
     private void sound2() {
-        MediaPlayer mplayer1 = MediaPlayer.create(getApplicationContext(), R.raw.sound2);
+        MediaPlayer mplayer1 = MediaPlayer.create(getApplicationContext(), R.raw.timbre2);
         mplayer1.start();
     }
 
     private void sound3() {
-        MediaPlayer mplayer2 = MediaPlayer.create(getApplicationContext(), R.raw.tic2);
+        MediaPlayer mplayer2 = MediaPlayer.create(WordsActivity.this, R.raw.juegoterminado);
         mplayer2.start();
     }
 
